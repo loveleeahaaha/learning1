@@ -23,7 +23,7 @@ public class ExecutorConfig {
     @Bean
     public Executor asyncServiceExecutor() {
         logger.info("start asyncServiceExecutor");
-        ThreadPoolTaskExecutor executor = new ThreadPoolTaskExecutor();
+        ThreadPoolTaskExecutor executor = new VisiableThreadPoolTaskExecutor();
         //核心线程数
         executor.setCorePoolSize(5);
         //最大线程数
@@ -32,7 +32,7 @@ public class ExecutorConfig {
         executor.setQueueCapacity(1000);
         //线程前缀设置
         executor.setThreadNamePrefix("async-service-");
-        //最大线程满了后执行拒绝策略，CallerRunsPlicy：不在新建线程中执行任务，而是用调用者所在的线程执行
+        //最大线程满了后执行拒绝策略，CallerRunsPolicy：不在新建线程中执行任务，而是用调用者所在的线程执行
         executor.setRejectedExecutionHandler(new ThreadPoolExecutor.CallerRunsPolicy());
         //执行初始化
         executor.initialize();
