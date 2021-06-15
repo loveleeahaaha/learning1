@@ -15,7 +15,7 @@ import org.springframework.web.bind.annotation.RestController;
 @RestController
 public class AsyncController {
     private static final Logger logger = LoggerFactory.getLogger(AsyncController.class);
-    
+
     @Autowired
     private AsyncService asyncService;
 
