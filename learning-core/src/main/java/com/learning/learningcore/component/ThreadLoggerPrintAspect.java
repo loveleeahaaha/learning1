@@ -1,4 +1,4 @@
-package com.lovelee.learning.component;
+package com.learning.learningcore.component;
 
 import org.aspectj.lang.ProceedingJoinPoint;
 import org.aspectj.lang.annotation.Around;

@@ -1,4 +1,4 @@
-package com.lovelee.learning.component;
+package com.learning.learningcore.component;
 
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;

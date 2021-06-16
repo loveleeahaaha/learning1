@@ -16,6 +16,13 @@
     <properties>
         <java.version>1.8</java.version>
     </properties>
+
+    <packaging>pom</packaging>
+    <modules>
+        <module>learning-common</module>
+        <module>learning-core</module>
+    </modules>
+
     <dependencies>
         <dependency>
             <groupId>org.springframework.boot</groupId>

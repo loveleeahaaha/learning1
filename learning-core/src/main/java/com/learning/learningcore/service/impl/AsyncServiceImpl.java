@@ -1,7 +1,7 @@
-package com.lovelee.learning.service.impl;
+package com.learning.learningcore.service.impl;
 
-import com.lovelee.learning.component.ThreadLoggerPrint;
-import com.lovelee.learning.service.AsyncService;
+import com.learning.learningcore.component.ThreadLoggerPrint;
+import com.learning.learningcore.service.AsyncService;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.scheduling.annotation.Async;

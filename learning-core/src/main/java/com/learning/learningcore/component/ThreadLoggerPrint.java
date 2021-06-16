@@ -1,4 +1,4 @@
-package com.lovelee.learning.component;
+package com.learning.learningcore.component;
 
 import java.lang.annotation.ElementType;
 import java.lang.annotation.Retention;

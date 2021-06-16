@@ -1,6 +1,6 @@
-package com.lovelee.learning.controller;
+package com.learning.learningcore.controller;
 
-import com.lovelee.learning.service.AsyncService;
+import com.learning.learningcore.service.AsyncService;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.annotation.Autowired;

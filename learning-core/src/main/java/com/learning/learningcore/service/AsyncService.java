@@ -1,4 +1,4 @@
-package com.lovelee.learning.service;
+package com.learning.learningcore.service;
 
 /**
  * @author liqiatao
