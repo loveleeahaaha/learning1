@@ -1,3 +1,35 @@
 spring:
   profiles:
     active:  #表示激活开发环境
+
+
+
+  # rabbitmq
+  rabbitmq:
+    host: localhost
+    port: 5672
+    username: guest
+    password: guest
+  # 开启confirms回调 P -> Exchange
+    # 开启returnedMessage回调 Exchange -> Queue
+    publisher-returns: true
+  # 设置手动确认(ack) Queue -> C
+    listener:
+      simple:
+        acknowledge-mode: manual
+        prefetch: 100
+    publisher-confirm-type: correlated
+    virtual-host: /
+  # mail
+  mail:
+    host: smtp.163.com
+    username: loveleeahaaha@163.com
+    password: 19960213501x
+    from: loveleeahaaha@163.com
+    properties:
+      mail:
+        smtp:
+          auth: true
+          starttls:
+            enable: true
+            required: true
