@@ -1,23 +1,22 @@
 package com.learning.learningconsumer;
 
-import com.learning.learningconsumer.component.SimpleSender;
+import com.learning.learningconsumer.component.SimpleRabbitConfig;
 import org.junit.Test;
 import org.junit.runner.RunWith;
+import org.springframework.amqp.rabbit.core.RabbitTemplate;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.test.context.SpringBootTest;
 import org.springframework.test.context.junit4.SpringJUnit4ClassRunner;
 
 @RunWith(SpringJUnit4ClassRunner.class)
-@SpringBootTest(classes = LearningConsumerApplication.class)
+@SpringBootTest
 public class RabbitMQTest {
     @Autowired
-    private SimpleSender simpleSender;
+    private RabbitTemplate rabbitTemplate;
 
     @Test
-    public void hello() throws Exception {
-        for (int i = 0; i < 10; i++) {
-            simpleSender.send();
-            Thread.sleep(1000);
-        }
+    public void testSendEmail() {
+        String message = "send email to user";
+        rabbitTemplate.convertAndSend(SimpleRabbitConfig.EXCHANGE_TOPICS_INFORM, "inform.email", message);
     }
 }

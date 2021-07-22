@@ -2,7 +2,12 @@ spring:
   profiles:
     active:  #表示激活开发环境
 
-
+  datasource:
+    username: root
+    password:
+    url: jdbc:mysql://localhost:3306/liqiatao?useUnicode=true&characterEncoding=utf-8&serverTimezone=GMT%2B8
+    type: com.alibaba.druid.pool.DruidDataSource
+    driver-class-name: com.mysql.cj.jdbc.Driver
 
   # rabbitmq
   rabbitmq:
@@ -10,10 +15,10 @@ spring:
     port: 5672
     username: guest
     password: guest
-  # 开启confirms回调 P -> Exchange
+    # 开启confirms回调 P -> Exchange
     # 开启returnedMessage回调 Exchange -> Queue
     publisher-returns: true
-  # 设置手动确认(ack) Queue -> C
+    # 设置手动确认(ack) Queue -> C
     listener:
       simple:
         acknowledge-mode: manual
